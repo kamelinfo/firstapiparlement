@@ -19,3 +19,4 @@ Route::post('register', [RegisterController::class, 'register']);
 
 Route::post('login', [RegisterController::class, 'login']);
 Route::apiResource('/cours',CourController::class)->middleware('auth:api');
+Route::get('verify-token', [RegisterController::class, 'verifyToken'])->middleware('auth:api');

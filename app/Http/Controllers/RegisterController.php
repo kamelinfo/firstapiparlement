@@ -105,4 +105,16 @@ class RegisterController extends Controller
             return response()->json(['success' => false, 'message' => 'wrong user name or password'], 404);
         }
     }
+    public function verifyToken(){
+        
+        $response = [
+
+            'success' => true,
+
+            'message'    => 'connexion autoriser',
+
+
+        ];
+        return response()->json($response, 200);
+    }
 }
